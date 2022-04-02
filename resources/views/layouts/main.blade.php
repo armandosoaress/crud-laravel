@@ -38,10 +38,10 @@
     </button>
   <div class="collapse navbar-collapse" id="main_nav">
 	<ul class="navbar-nav ms-auto">
-    <li class="nav-item"><a class="nav-link" href="/eventos/criar">  INICIO </a></li>
-  <li class="nav-item"><a class="nav-link" href="/eventos/criar">  CADASTRAR </a></li>
+    <li class="nav-item"><a class="nav-link" href="/">  Inicio </a></li>
+  <li class="nav-item"><a class="nav-link" href="/cadastrar">  Cadastrar </a></li>
 
-		<li class="nav-item"><a class="nav-link" href="/eventos/criar"> DELETAR </a></li>
+
 
     @auth
     <li class="nav-item"><a class="nav-link" href="/login"> VIZUALIZAR </a></li>
@@ -58,10 +58,6 @@
     </li>
     @endauth
 
-    @guest
-		<li class="nav-item"><a class="nav-link" href="/login"> ENTRAR  </a></li>
-    <li class="nav-item"><a class="nav-link" href="/register"> CADASTRAR </a></li>
-    @endguest
 	</ul>
   </div> <!-- navbar-collapse.// -->
  </div> <!-- container-fluid.// -->

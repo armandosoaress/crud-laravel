@@ -7,10 +7,7 @@ use App\Models\bd;
 
 class funcoes extends Controller
 {
-    public function index()
-    {
-          return view('welcome');
-    }
+   
 
     public function cadastrar()
     {
@@ -40,9 +37,36 @@ class funcoes extends Controller
           ]);
       
     }
-
-
+    public function editar($id)
+    {
+        $id=$id;
+      
+        $alunos = bd::findOrFail($id);
+        return view('editar',
+         [
+              'alunos'=> $alunos,
+             
+          ]);
+      
     }
+
+    public function update(Request $request){
+        $data=$request->all();
+        bd::findOrFail( $request->id)->update($data);
+        return redirect('/')->with('msg','evento editado com susseso');
+         
+
+    
+
+    }  
+
+    public function destroy($id){
+
+        bd::findOrFail($id)->delete();
+    
+        return redirect('/')->with('msg','evento deletado com susseso');
+    }
+}
 
 
   

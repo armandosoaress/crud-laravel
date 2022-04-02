@@ -4,3 +4,9 @@ footer{
     color: aliceblue;
     text-align: center;
 }
+a:hover {
+   color: white;
+  }
+  body{
+      margin: 0;
+  }
